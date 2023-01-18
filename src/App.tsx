@@ -10,8 +10,7 @@ function App() {
   return (
     <div className="App">
       <Nav>{name1} {typeof name1}</Nav>
-      <Nav>{num} {typeof num}</Nav>
-
+      <Nav>{num} {typeof num }</Nav>
     </div>
   );
 }

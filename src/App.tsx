@@ -1,17 +1,18 @@
-import React from 'react';
-import { Button, Nav } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, Nav, Container, Form } from 'react-bootstrap';
 import './App.css';
 
 function App() {
-  type Name = string | number;
-  let name1 :Name = "123";
-  let num : Name = 123;
+  const [count, setCount] = useState<number>(0);//  react Hooks에도 typeScript적용
+  const onIncrease = () => setCount(count + 1);
+  const onDecrease = () => setCount(count - 1);
 
   return (
-    <div className="App">
-      <Nav>{name1} {typeof name1}</Nav>
-      <Nav>{num} {typeof num }</Nav>
-    </div>
+    <Container>
+      <h1>{count} {typeof count}</h1>
+      <Button onClick={onIncrease}>+</Button>
+      <Button onClick={onDecrease}>-</Button>
+    </Container>
   );
 }
 

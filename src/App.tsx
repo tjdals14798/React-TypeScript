@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Nav, Container, Form } from 'react-bootstrap';
+import { Button, Container} from 'react-bootstrap';
+import MyForm from './MyForm';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
@@ -7,12 +9,20 @@ function App() {
   const onIncrease = () => setCount(count + 1);
   const onDecrease = () => setCount(count - 1);
 
+  const onSubmit = (form: { name: string; description: string }) => {
+    console.log(form);
+  };
+
   return (
+  <>
     <Container>
       <h1>{count} {typeof count}</h1>
       <Button onClick={onIncrease}>+</Button>
       <Button onClick={onDecrease}>-</Button>
     </Container>
+    <MyForm onSubmit ={onSubmit}/>
+    
+  </>
   );
 }
 

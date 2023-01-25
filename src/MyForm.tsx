@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// 상태가 null일 수도 있고 아닐수도 있을때 Generics 를 활용하면 좋다.
 type MyFormProps = {
-    onSubmit: (form: {name: string; description:string }) => void;
+    onSubmit: (form: {name: string; description:string|number }) => void;
 };
 
 function MyForm({ onSubmit }: MyFormProps){

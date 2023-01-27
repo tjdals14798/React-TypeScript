@@ -1,23 +1,24 @@
 import React from 'react';
-import MyForm from './MyForm';
-import Counter from './Counter';
-import ReducerSample from './ReducerSample';
-import { SampleProvider } from './SampleContext';
-import './App.css';
+import CounterContainer from './containers/CounterContainer';
+// import MyForm from './MyForm';
+// import Counter from './Counter';
+// import ReducerSample from './ReducerSample';
+// import { SampleProvider } from './SampleContext';
 
 function App() {
 
-  const onSubmit = (form: { name: string; description: string|number }) => {
-    console.log(form);
-  };
+  // const onSubmit = (form: { name: string; description: string|number }) => {
+  //   console.log(form);
+  // };
 
   return (
   <>
-    <Counter />
+  <CounterContainer/>
+    {/* <Counter />
     <MyForm onSubmit ={onSubmit}/>
     <SampleProvider>
       <ReducerSample />
-    </SampleProvider>
+    </SampleProvider> */}
   </>
   );
 }

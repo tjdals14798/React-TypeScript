@@ -8,9 +8,8 @@ import rootReducer from './modules';
 import reportWebVitals from './reportWebVitals';
 
 const store = createStore(rootReducer);
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
 root.render(
   <Provider store={store}>
     <App />

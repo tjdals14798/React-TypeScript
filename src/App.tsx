@@ -1,5 +1,6 @@
 import React from 'react';
 import CounterContainer from './containers/CounterContainer';
+import TodoApp from './containers/TodoApp';
 // import MyForm from './MyForm';
 // import Counter from './Counter';
 // import ReducerSample from './ReducerSample';
@@ -14,6 +15,8 @@ function App() {
   return (
   <>
   <CounterContainer/>
+  <TodoApp/>
+
     {/* <Counter />
     <MyForm onSubmit ={onSubmit}/>
     <SampleProvider>
